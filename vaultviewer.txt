@@ -1,0 +1,63 @@
+drawflush display1
+bop div 80 10 sizex
+bop mod time 10 nowi
+bop add time 1 time
+sensor sizey vault1 @itemCapacity
+bop div 80 sizey sizey
+sensor now vault1 @copper
+set r 184
+set g 115
+set b 51
+jump 57 equal nowi 0
+sensor now vault1 @lead
+set r 171
+set g 153
+set b 211
+jump 57 equal nowi 1
+sensor now vault1 @metaglass
+set r 255
+set g 255
+set b 255
+jump 57 equal nowi 2
+sensor now vault1 @graphite
+set r 149
+set g 171
+set b 217
+jump 57 equal nowi 3
+sensor now vault1 @titanium
+set r 135
+set g 206
+set b 235
+jump 57 equal nowi 4
+sensor now vault1 @surge-alloy
+set r 255
+set g 215
+set b 0
+jump 57 equal nowi 5
+sensor now vault1 @thorium
+set r 255
+set g 152
+set b 255
+jump 57 equal nowi 6
+sensor now vault1 @silicon
+set r 128
+set g 128
+set b 128
+jump 57 equal nowi 7
+sensor now vault1 @plastanium
+set r 144
+set g 240
+set b 144
+jump 57 equal nowi 8
+sensor now vault1 @phase-fabric
+set r 255
+set g 146
+set b 72
+jump 57 equal nowi 9
+end
+bop mul sizey now sizey
+bop mul nowi sizex x
+draw color 0 0 0 0 0 0
+draw rect x 0 sizex 80 0 0
+draw color r g b 0 0 0
+draw rect x 0 sizex sizey 0 0
